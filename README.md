@@ -117,7 +117,7 @@ Instalar o `Python` no `Linux Ubuntu` via `Terminal Emulator` é um processo rel
 
 Para garantir que o comando python no `Terminal Emulator` aponte para o `Python 3` em vez de uma versão anterior (ou de não apontar para nada), você pode criar um _link_ simbólico que faz com que o comando `python` execute `python3`. Aqui está como você pode fazer isso:
 
-1. **Verificar a versão do `Python 3`**: Primeiro, verifique onde o `python3` está localizado: `which python3`
+1. **Verificar a versão do `Python 3`**: Primeiro, verifique onde o `python3` está localizado: `whereis python3`
 
     Isso retornará o caminho completo para o executável `python3`. Anote esse caminho, pois você precisará dele mais tarde. Normalmente, o caminho é algo como `/usr/bin/python3`.
 

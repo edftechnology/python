@@ -29,7 +29,7 @@
 #  <a href="https://github.com/edendenis/python">Solicitar recurso</a>
 # </p>
 # 
-
+# 
 # # Configurar/instalar/usar o `Python 3.8` no `Linux Ubuntu`
 # 
 # ## Resumo
@@ -40,7 +40,7 @@
 # 
 # _In this document are contained the main commands and settings to set up/install the `Python 3.8` on `Linux Ubuntu`._
 # 
-
+# 
 # ### Construído com
 # 
 # Esta seção deve listar todas as principais estruturas/bibliotecas usadas para inicializar seu projeto. Deixe quaisquer complementos/plugins para a seção de agradecimentos. Aqui estão alguns exemplos.
@@ -53,7 +53,7 @@
 # 
 # <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 # 
-
+# 
 # <!-- COMEÇANDO -->
 # ### Começando
 # 
@@ -74,19 +74,19 @@
 # 
 # <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 # 
-
+# 
 # ## Descrição [2]
 # 
 # ### `Python`
 # 
 # O `Python` é uma linguagem de programação de alto nível, interpretada e multiparadigma, conhecida por sua simplicidade e legibilidade. Criada por Guido van Rossum e lançada em 1991, `Python` oferece uma sintaxe clara e concisa, tornando-a ideal para iniciantes e experientes. Sua ampla biblioteca padrão e vasta comunidade de desenvolvedores facilitam a criação de uma variedade de aplicativos, desde scripts simples até aplicativos web complexos, aprendizado de máquina e ciência de dados. `Python` é valorizado por sua portabilidade, interoperabilidade e escalabilidade, sendo uma escolha popular em muitas áreas da computação e além.
-
+# 
 # ## 1. Como configurar/instalar/usar o `Python` no `Linux Ubuntu` [1]
 # 
 # Para configurar/instalar/usar o `Python` no `Linux Ubuntu`, você pode seguir estes passos:
 # 
 # 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
-
+# 
 # 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 # 
 #     2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
@@ -105,22 +105,22 @@
 # 
 #     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
 #     
-
+# 
 # 3. Baixe a versão desejada do python em: <https://www.python.org/>
 # 
-
+# 
 # Instalar o `Python` no `Linux Ubuntu` via `Terminal Emulator` é um processo relativamente simples. O `Linux Ubuntu` já vem com o `Python` pré-instalado, mas você pode querer instalar uma versão específica ou atualizar a existente. Aqui estão os passos para instalar o `Python` ou atualizar para uma versão específica:
 # 
 # 1. **Instalar `Python 3.x`**: Se você quiser instalar uma versão específica do `Python 3.x`, você pode especificar o número da versão. Por exemplo, para instalar o `Python 3.8`: `sudo apt install python3.8 -y`
 # 
 # 2. **Verificar a Instalação**: Para verificar se o `Python` foi instalado corretamente e qual versão está instalada, execute: `python3 --version`
 # 
-
+# 
 # ### 1.1 Adicionar o `Python` ao `$PATH` do `Linux Ubuntu`
 # 
 # Para garantir que o comando python no `Terminal Emulator` aponte para o `Python 3` em vez de uma versão anterior (ou de não apontar para nada), você pode criar um _link_ simbólico que faz com que o comando `python` execute `python3`. Aqui está como você pode fazer isso:
 # 
-# 1. **Verificar a versão do `Python 3`**: Primeiro, verifique onde o `python3` está localizado: `which python3`
+# 1. **Verificar a versão do `Python 3`**: Primeiro, verifique onde o `python3` está localizado: `whereis python3`
 # 
 #     Isso retornará o caminho completo para o executável `python3`. Anote esse caminho, pois você precisará dele mais tarde. Normalmente, o caminho é algo como `/usr/bin/python3`.
 # 
@@ -142,14 +142,14 @@
 # 
 # 6. **Verificar a Versão**: Certifique-se de que o comando `python` está chamando a versão correta do `Python`: `python --version`
 # 
-
+# 
 # ## 1.2 Instalar o `pip` para o `Python 3.x`
 # 
 # O `pip` pode não estar instalado automaticamente com o `Python`. Você pode instalar o `pip` usando o `apt` (o gerenciador de pacotes do `Linux Ubuntu`) ou o _script_ de instalação `get-pip.py`. Primeiro, vamos tentar instalar o `pip` usando `apt`.
 # 
 # 1. **Atualizar o Sistema**: Certifique-se de que seu sistema está atualizado:
 # 
-
+# 
 # 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 # 
 #     2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
@@ -168,13 +168,13 @@
 # 
 #     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
 #     
-
+# 
 # 3. **Instalar o `pip`**: Tente instalar o `pip` para `Python 3` usando o seguinte comando: `sudo apt install python3-pip -y`
 # 
 # 4. **Verificar a Instalação do `pip`**: Depois de instalar o `pip`, verifique se está funcionando: `pip3 --version`
 # 
 # Isso deve mostrar a versão do `pip` instalada.
-
+# 
 # ## 2. Código completo para configurar/instalar/usar
 # 
 # Para configurar/instalar/usar o `Python` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
@@ -187,14 +187,14 @@
 #     NÂO há.
 #     ```
 # 
-
+# 
 # <!-- LICENÇA -->
 # ## Licença
 # 
 # Distribuído sob a licença MIT. Consulte `LICENSE.txt` para obter mais informações.
 # 
 # <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
+# 
 # <!-- ROTEIRO -->
 # ## Roteiro
 # 
@@ -218,7 +218,7 @@
 # 
 # <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 # 
-
+# 
 # <!-- CONTRIBUIÇÔES -->
 # ## Contribuições
 # 
@@ -239,7 +239,7 @@
 # 
 # <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 # 
-
+# 
 # <!-- ACKNOWLEDGMENTS -->
 # ## Agradecimentos
 # 
@@ -263,11 +263,12 @@
 # 
 # <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 # 
-
+# 
 # ## Referências
 # 
 # [3] OPENAI. ***Instalar o python no ubuntu.*** Disponível em: <https://chat.openai.com/c/0ce53031-41c5-4185-93d7-0156e1d2cb2a> (texto adaptado). Acessado em: 13/03/2024 13:47.
 # 
 # [2] OPENAI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 13/03/2024 13:48.
+# 
 # 
 # 
