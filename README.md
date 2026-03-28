@@ -27,6 +27,8 @@
 </p>
 
 
+
+
 # Configurar/instalar/usar o `Python 3.8` no `Linux Ubuntu`
 
 ## Resumo
@@ -36,6 +38,8 @@ Neste documento estão contidos os principais comandos e configurações para co
 ## _Abstract_
 
 _In this document are contained the main commands and settings to set up/install the `Python 3.8` on `Linux Ubuntu`._
+
+
 
 
 ### Construído com
@@ -51,11 +55,15 @@ Esta seção deve listar todas as principais estruturas/bibliotecas usadas para 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
+
+
 <!-- COMEÇANDO -->
 ### Começando
 
 Este é um exemplo de como você pode dar instruções sobre como configurar seu projeto localmente.
 Para obter uma cópia local instalada e funcionando, siga estas etapas simples de exemplo.
+
+
 
 ### Pré-requisitos
 
@@ -72,6 +80,8 @@ Este é um exemplo de como listar os itens necessários para usar o _software_ e
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
+
+
 ## Descrição [2]
 
 ### `Python`
@@ -82,107 +92,211 @@ O `Python` é uma linguagem de programação de alto nível, interpretada e mult
 
 Para configurar/instalar/usar o `Python` no `Linux Ubuntu`, você pode seguir estes passos:
 
-1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
+
+    ```bash
+    Ctrl + Alt + T
+    ```
 
 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 
-    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
-    
-    2.2 Remover pacotes `.deb` antigos ou duplicados do cache local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
+    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando:
+    ```bash
+    sudo apt clean
+    ```
 
-    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando: `sudo apt autoremove -y`
+    2.2 Remover pacotes `.deb` antigos ou duplicados do `cache` local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando:
+    ```bash
+    sudo apt autoclean
+    ```
 
-    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`: `sudo apt update`
+    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando:
+    ```bash
+    sudo apt autoremove -y
+    ```
 
-    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes: `sudo apt --fix-broken install`
+    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt update
+    ```
 
-    2.6 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
-    
-    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:  `sudo apt list --upgradable`
+    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes:
+    ```bash
+    sudo apt --fix-broken install
+    ```
 
-    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
-    
+    2.6 Limpar o `cache` do gerenciador de pacotes `apt` novamente:
+    ```bash
+    sudo apt clean
+    ```
+
+    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt list --upgradable
+    ```
+
+    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt full-upgrade -y
+    ```
 
 3. Baixe a versão desejada do python em: <https://www.python.org/>
 
-
 Instalar o `Python` no `Linux Ubuntu` via `Terminal Emulator` é um processo relativamente simples. O `Linux Ubuntu` já vem com o `Python` pré-instalado, mas você pode querer instalar uma versão específica ou atualizar a existente. Aqui estão os passos para instalar o `Python` ou atualizar para uma versão específica:
 
-1. **Instalar `Python 3.x`**: Se você quiser instalar uma versão específica do `Python 3.x`, você pode especificar o número da versão. Por exemplo, para instalar o `Python 3.8`: `sudo apt install python3.8 -y`
+1. **Instalar `Python 3.x`**: Se você quiser instalar uma versão específica do `Python 3.x`, você pode especificar o número da versão. Por exemplo, para instalar o `Python 3.8`:
 
-2. **Verificar a Instalação**: Para verificar se o `Python` foi instalado corretamente e qual versão está instalada, execute: `python3 --version`
+    ```bash
+    sudo apt install python3.8 -y
+    ```
 
+2. **Verificar a Instalação**: Para verificar se o `Python` foi instalado corretamente e qual versão está instalada, execute:
+
+    ```bash
+    python3 --version
+    ```
 
 ### 1.1 Adicionar o `Python` ao `$PATH` do `Linux Ubuntu`
 
 Para garantir que o comando python no `Terminal Emulator` aponte para o `Python 3` em vez de uma versão anterior (ou de não apontar para nada), você pode criar um _link_ simbólico que faz com que o comando `python` execute `python3`. Aqui está como você pode fazer isso:
 
-1. **Verificar a versão do `Python 3`**: Primeiro, verifique onde o `python3` está localizado: `whereis python3`
+1. **Verificar a versão do `Python 3`**: Primeiro, verifique onde o `python3` está localizado:
 
-    Isso retornará o caminho completo para o executável `python3`. Anote esse caminho, pois você precisará dele mais tarde. Normalmente, o caminho é algo como `/usr/bin/python3`.
+    ```bash
+    whereis python3
+    ```
 
-2. **Criar um _Link_ Simbólico**: Para criar um _link_ simbólico para que o comando `python` aponte para `python3`, use o seguinte comando: `sudo ln -s /usr/bin/python3 /usr/bin/python`
+    Isso retornará o caminho completo para o executável `python3`. Anote esse caminho, pois você precisará dele mais tarde. Normalmente, o caminho é algo como:
+    
+    ```bash
+    /usr/bin/python3
+    ```
+
+2. **Criar um _Link_ Simbólico**: Para criar um _link_ simbólico para que o comando `python` aponte para `python3`, use o seguinte comando:
+
+    ```bash
+    sudo ln -s /usr/bin/python3 /usr/bin/python
+    ```
 
     Aqui, `/usr/bin/python3` deve ser substituído pelo caminho que você obteve na etapa anterior, se for diferente.
 
-3. **Verificar a Alteração**: Verifique se o _link_ simbólico foi criado corretamente e se `python` agora aponta para o `Python 3`: `python --version`
+3. **Verificar a Alteração**: Verifique se o _link_ simbólico foi criado corretamente e se `python` agora aponta para o `Python 3`:
+
+    ```bash
+    python --version
+    ```
 
     Isso deve mostrar a versão do `Python 3`, indicando que o _link_ simbólico foi criado corretamente.
 
-4. **Verificar o _Link_ Simbólico**: Verifique se o _link_ simbólico foi criado corretamente: `ls -l /usr/bin/python`
+4. **Verificar o _Link_ Simbólico**: Verifique se o _link_ simbólico foi criado corretamente:
 
-    Isso deve mostrar algo como: `lrwxrwxrwx 1 root root 16 Aug  6 12:34 /usr/bin/python -> /usr/bin/python3`
+    ```bash
+    ls -l /usr/bin/python
+    ```
+
+    Isso deve mostrar algo como:
+    
+    ```bash
+    lrwxrwxrwx 1 root root 16 Aug  6 12:34 /usr/bin/python -> /usr/bin/python3
+    ```
 
     Se não estiver apontando para `/usr/bin/python3`, então o _link_ simbólico não foi criado corretamente.
 
 5. **Reinicie o `Terminal Emulator`**: Às vezes, o erminal pode não refletir mudanças imediatamente. Tente fechar e reabrir o `Terminal Emulator` ou usar o comando `hash -r `para limpar o _cache_ do caminho dos comandos.
 
-6. **Verificar a Versão**: Certifique-se de que o comando `python` está chamando a versão correta do `Python`: `python --version`
+6. **Verificar a Versão**: Certifique-se de que o comando `python` está chamando a versão correta do `Python`:
+
+    ```bash
+    python --version
+    ```
+
 
 
 ## 1.2 Instalar o `pip` para o `Python 3.x`
 
 O `pip` pode não estar instalado automaticamente com o `Python`. Você pode instalar o `pip` usando o `apt` (o gerenciador de pacotes do `Linux Ubuntu`) ou o _script_ de instalação `get-pip.py`. Primeiro, vamos tentar instalar o `pip` usando `apt`.
 
-1. **Atualizar o Sistema**: Certifique-se de que seu sistema está atualizado:
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
 
+    ```bash
+    Ctrl + Alt + T
+    ```
 
 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 
-    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
-    
-    2.2 Remover pacotes `.deb` antigos ou duplicados do cache local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
+    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando:
+    ```bash
+    sudo apt clean
+    ```
 
-    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando: `sudo apt autoremove -y`
+    2.2 Remover pacotes `.deb` antigos ou duplicados do `cache` local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando:
+    ```bash
+    sudo apt autoclean
+    ```
 
-    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`: `sudo apt update`
+    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando:
+    ```bash
+    sudo apt autoremove -y
+    ```
 
-    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes: `sudo apt --fix-broken install`
+    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt update
+    ```
 
-    2.6 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
-    
-    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:  `sudo apt list --upgradable`
+    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes:
+    ```bash
+    sudo apt --fix-broken install
+    ```
 
-    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
-    
+    2.6 Limpar o `cache` do gerenciador de pacotes `apt` novamente:
+    ```bash
+    sudo apt clean
+    ```
 
-3. **Instalar o `pip`**: Tente instalar o `pip` para `Python 3` usando o seguinte comando: `sudo apt install python3-pip -y`
+    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt list --upgradable
+    ```
 
-4. **Verificar a Instalação do `pip`**: Depois de instalar o `pip`, verifique se está funcionando: `pip3 --version`
+    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`:
+    ```bash
+    sudo apt full-upgrade -y
+    ```
 
-Isso deve mostrar a versão do `pip` instalada.
+3. **Instalar o `pip`**: Tente instalar o `pip` para `Python 3` usando o seguinte comando:
+
+    ```bash
+    sudo apt install python3-pip -y
+    ```
+
+4. **Verificar a Instalação do `pip`**: Depois de instalar o `pip`, verifique se está funcionando:
+
+    ```bash
+    pip3 --version
+    ```
+
+    Isso deve mostrar a versão do `pip` instalada.
+
+
 
 ## 2. Código completo para configurar/instalar/usar
 
 Para configurar/instalar/usar o `Python` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 
-1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
+
+    ```bash
+    Ctrl + Alt + T
+    ```
 
 2. Digite o seguinte comando e pressione `Enter`:
 
-    ```
+    ```bash
     NÂO há.
     ```
+
+
 
 
 <!-- LICENÇA -->
@@ -191,6 +305,8 @@ Para configurar/instalar/usar o `Python` no `Linux Ubuntu` sem precisar digitar 
 Distribuído sob a licença MIT. Consulte `LICENSE.txt` para obter mais informações.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+
 
 <!-- ROTEIRO -->
 ## Roteiro
@@ -216,6 +332,8 @@ Consulte os [problemas abertos](https://github.com/edendenis/google_chrome/issue
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
+
+
 <!-- CONTRIBUIÇÔES -->
 ## Contribuições
 
@@ -235,6 +353,8 @@ Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 5. Abra uma solicitação `pull`
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -261,10 +381,10 @@ Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
+
+
 ## Referências
 
-[3] OPENAI. ***Instalar o python no ubuntu.*** Disponível em: <https://chat.openai.com/c/0ce53031-41c5-4185-93d7-0156e1d2cb2a> (texto adaptado). Acessado em: 13/03/2024 13:47.
+[1] OPENAI. **Instalar o python no ubuntu.** Disponível em: <https://chat.openai.com/c/0ce53031-41c5-4185-93d7-0156e1d2cb2a> (texto adaptado). Acessado em: 13/03/2024 13:47.
 
-[2] OPENAI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 13/03/2024 13:48.
-
-
+[2] OPENAI. **Vs code: editor popular.** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 13/03/2024 13:48.
